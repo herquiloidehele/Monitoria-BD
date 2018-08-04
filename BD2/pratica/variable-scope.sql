@@ -1,0 +1,23 @@
+
+DECLARE
+
+	numero1 INTEGER := 10;
+	numero2 INTEGER DEFAULT 20;
+
+BEGIN
+	
+
+	DBMS_OUTPUT.PUT_LINE(numero1);
+
+	DECLARE
+		numero1 INTEGER := 20;
+		numero2 INTEGER := 19;
+
+	BEGIN
+		DBMS_OUTPUT.PUT_LINE(numero1);
+		DBMS_OUTPUT.PUT_LINE(numero2);
+	END;
+
+
+END;
+/

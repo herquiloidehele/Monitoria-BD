@@ -1,0 +1,37 @@
+
+SET SERVEROUTPUT ON;
+
+DECLARE 
+
+	PROCEDURE is_vogal(letra char) IS
+	BEGIN
+		IF upper(letra) IN ('A', 'E', 'I', 'O', 'U') THEN
+			DBMS_OUTPUT.PUT_LINE('VOGAL');
+		ELSE
+			DBMS_OUTPUT.PUT_LINE('CONSOANTE'); 
+		END IF;
+	END;
+
+	PROCEDURE resultado_aprovacao(media NUMBER) IS
+	BEGIN
+
+		CASE 
+			WHEN media BETWEEN 10 AND 13 
+				THEN DBMS_OUTPUT.PUT_LINE('ADMITIDO');
+			WHEN media >= 14
+				THEN DBMS_OUTPUT.PUT_LINE('DISPENSADO');
+			WHEN media < 10 
+				THEN DBMS_OUTPUT.PUT_LINE('EXCLUIDO');
+			ELSE DBMS_OUTPUT.PUT_LINE('NOTA FORA DO INTERVALO');
+		END CASE;
+
+	END;
+
+
+BEGIN
+
+	-- is_vogal('W'); 
+	resultado_aprovacao(1);
+
+END;
+/

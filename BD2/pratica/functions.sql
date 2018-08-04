@@ -1,0 +1,15 @@
+CREATE OR REPLACE FUNCTION soma (a IN NUMBER, b IN NUMBER) RETURN NUMBER AS
+BEGIN
+
+	return a + b;
+
+END soma;
+/
+
+
+BEGIN
+	
+	DBMS_OUTPUT.PUT_LINE(soma(10, 30));
+
+END;
+/
